@@ -1,0 +1,9 @@
+# Client data is not redistributable: never commit it
+*.xlsx
+*.xls
+*.csv
+data/
+
+.ipynb_checkpoints/
+__pycache__/
+.DS_Store

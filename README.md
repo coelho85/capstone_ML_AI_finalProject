@@ -153,13 +153,13 @@ Independent Dealer is by far the most common channel in the highest bin, and IBD
 ## Repository contents
 
 ```text
-├── capstone.ipynb    Full analysis notebook, with confidential outputs removed
+├── capstone.ipynb    Cleaned analysis notebook, with confidential outputs removed
 ├── figures/          Figures from the final presentation
 └── README.md
 ```
 
 ## About the notebook
 
-- **Removed content:** saved outputs showing advisor IDs or per-advisor rows, plus local file paths and warning messages. The analysis code is unchanged apart from the working-directory line.
-- **Run order:** this is a working notebook and its cells were not run strictly top to bottom, so some saved outputs show errors. That includes the cells for the classification channel charts, so those charts come from the presentation. The "Other way" section is earlier exploratory work.
-- **Running it:** you need the original data files, which are not public. It was written in 2020 with xgboost 1.2 and may need package versions from that period. Main dependencies are `pandas`, `numpy`, `scikit-learn`, `xgboost`, `imbalanced-learn`, `scikit-plot`, `seaborn`, `matplotlib` and `openpyxl`.
+- **Cleaned up:** abandoned experiments, commented-out code, unused cells and long warning messages have been removed, so the notebook contains only the final analysis. Saved outputs showing advisor IDs or per-advisor rows are also removed.
+- **Saved outputs:** the outputs come from the original 2020 runs, so execution numbers are out of order. Cells whose saved output was removed, including the classification channel charts, show no output until re-run.
+- **Running it:** you need the original data files, which are not public. It was written in 2020 with xgboost 1.2. Newer versions give slightly different scores because their defaults changed; setting `tree_method='exact'` and `base_score=0.5` on the regressor reproduces the R² values above. Main dependencies are `pandas`, `numpy`, `scikit-learn`, `xgboost`, `imbalanced-learn`, `scikit-plot`, `seaborn`, `matplotlib` and `openpyxl`.
